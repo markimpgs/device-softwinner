@@ -94,8 +94,6 @@ on boot
     #insmod /system/vendor/modules/gc2155.ko
     insmod /system/vendor/modules/vfe_v4l2.ko
 
-
-
     setenforce 0
 
 # network
@@ -160,7 +158,7 @@ on fs
     format_userdata /dev/block/by-name/private PRIVATE
     mkdir /mnt/private
     mount vfat /dev/block/by-name/private /mnt/private
-	
+
 on property:sys.boot_completed=1
     chown system system /sys/devices/soc.0/1c2ac00.twi/i2c-0/0-0040/runtime_suspend
     chmod 0660 /sys/devices/soc.0/1c2ac00.twi/i2c-0/0-0040/runtime_suspend
