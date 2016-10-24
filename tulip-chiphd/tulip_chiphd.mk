@@ -9,7 +9,6 @@ PRODUCT_PACKAGES += \
     Launcher3
 
 PRODUCT_PACKAGES += \
-    SuperSU \
     ESFileExplorer \
     VideoPlayer \
     Bluetooth

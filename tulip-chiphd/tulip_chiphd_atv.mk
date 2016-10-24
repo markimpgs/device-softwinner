@@ -4,8 +4,6 @@ $(call inherit-product, device/google/atv/products/atv_generic.mk)
 GAPPS_VARIANT := nano
 
 PRODUCT_PACKAGES += \
-    Provision \
-    SuperSU \
     ESFileExplorer \
     Bluetooth \
     SideloadLauncher
@@ -15,11 +13,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 		frameworks/av/media/libstagefright/data/media_codecs_google_tv.xml:system/etc/media_codecs_google_tv.xml \
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-		ro.product.model=fugu \
-		ro.product.device=fugu \
-		ro.product.brand=Android
 
 # xhdpi, while we are hardcoding the 1080 resolution.
 # when we start doing 720 as well, will need to stop hardcoding this.

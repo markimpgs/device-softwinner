@@ -1,10 +1,6 @@
 # inherit common.mk
 $(call inherit-product, device/softwinner/common/common.mk)
 
-DEVICE_PACKAGE_OVERLAYS := \
-    device/softwinner/tulip-common/overlay \
-    $(DEVICE_PACKAGE_OVERLAYS)
-
 PRODUCT_PACKAGES += \
     lights.tulip \
     hwcomposer.tulip \

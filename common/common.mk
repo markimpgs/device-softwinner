@@ -1,9 +1,6 @@
 # inherit tools.mk
 $(call inherit-product, device/softwinner/common/prebuild/tools/tools.mk)
 
-DEVICE_PACKAGE_OVERLAYS := \
-    device/softwinner/common/overlay
-
 PRODUCT_COPY_FILES += \
     device/softwinner/common/init.common.rc:root/init.common.rc \
     device/softwinner/common/init.sensors.rc:root/init.sensors.rc \

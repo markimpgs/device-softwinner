@@ -42,11 +42,11 @@ PRODUCT_PACKAGES += \
     power.tulip \
     input.evdev.default \
     static_busybox \
-    ethtool
+    ethtool \
+    su
 
-DEVICE_PACKAGE_OVERLAYS := \
-    device/softwinner/tulip-chiphd/overlay \
-    $(DEVICE_PACKAGE_OVERLAYS)
+DEVICE_PACKAGE_OVERLAYS += \
+    device/softwinner/tulip-chiphd/overlay
 
 PRODUCT_COPY_FILES += \
     device/softwinner/tulip-chiphd/fstab.sun50iw1p1:root/fstab.sun50iw1p1 \
@@ -95,7 +95,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp,adb \
     ro.adb.secure=0 \
-    rw.logger=0
+    rw.logger=0 \
+		persist.sys.root_access=2 # Allow ADB access only
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.firmware=v1.2.5
