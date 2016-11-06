@@ -14,7 +14,7 @@ key 68    SPACE
 key 29    MENU
 key 26	  HOME
 key 69    BACK
-key 13    ENTER
+key 13    DPAD_CENTER
 key 11    DPAD_UP
 key 16    DPAD_LEFT
 key 17    DPAD_RIGHT
