@@ -6,7 +6,8 @@ GAPPS_VARIANT := nano
 PRODUCT_PACKAGES += \
     ESFileExplorer \
     Bluetooth \
-    SideloadLauncher
+    SideloadLauncher \
+    Camera
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.live_tv.xml:system/etc/permissions/android.software.live_tv.xml
@@ -17,8 +18,11 @@ PRODUCT_COPY_FILES += \
 # xhdpi, while we are hardcoding the 1080 resolution.
 # when we start doing 720 as well, will need to stop hardcoding this.
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=320 \
-    persist.sys.hdmi.output_mode=10
+	ro.sf.lcd_density.480=160 \
+	ro.sf.lcd_density.576=160 \
+	ro.sf.lcd_density.720=213 \
+	ro.sf.lcd_density.1080=320 \
+	ro.sf.lcd_density.2160=640
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hdmi.device_type=4

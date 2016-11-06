@@ -23,8 +23,12 @@ $(call inherit-product, device/softwinner/common/rild/radio_common.mk)
 
 # mdpi, while we are hardcoding the 1080 resolution.
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=160 \
-    persist.sys.hdmi.output_mode=10
+	ro.sf.lcd_density.480=160 \
+	ro.sf.lcd_density.576=160 \
+	ro.sf.lcd_density.600=160 \
+	ro.sf.lcd_density.720=160 \
+	ro.sf.lcd_density.1080=160 \
+	ro.sf.lcd_density.2160=320
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hdmi.device_type=4
