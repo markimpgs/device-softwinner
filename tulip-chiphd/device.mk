@@ -54,6 +54,7 @@ PRODUCT_COPY_FILES += \
     device/softwinner/tulip-chiphd/init.recovery.sun50iw1p1.rc:root/init.recovery.sun50iw1p1.rc \
     device/softwinner/tulip-chiphd/ueventd.sun50iw1p1.rc:root/ueventd.sun50iw1p1.rc \
     device/softwinner/tulip-chiphd/initialize_disk.sh:root/initialize_disk.sh \
+    device/softwinner/tulip-chiphd/configure_system.sh:system/bin/configure_system.sh \
     device/softwinner/tulip-chiphd/recovery.fstab:recovery.fstab
 
 PRODUCT_COPY_FILES += \

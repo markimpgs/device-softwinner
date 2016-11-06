@@ -158,6 +158,9 @@ on boot
     write /dev/cpuset/system-background/cpus 0-1
     write /dev/cpuset/top-app/cpus 0-3
 
+    exec u:r:su:s0 root -- /sbin/busybox sh /system/bin/configure_system.sh
+    exec u:r:su:s0 root -- /sbin/busybox sh /bootloader/rc.local
+
 on charger
     insmod nand.ko
     mount_all /fstab.sun50iw1p1
