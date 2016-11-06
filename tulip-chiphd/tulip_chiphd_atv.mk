@@ -7,7 +7,8 @@ PRODUCT_PACKAGES += \
     ESFileExplorer \
     Bluetooth \
     SideloadLauncher \
-    Camera
+    Camera \
+    Provision
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.live_tv.xml:system/etc/permissions/android.software.live_tv.xml
