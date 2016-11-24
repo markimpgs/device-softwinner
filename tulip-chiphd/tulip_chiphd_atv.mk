@@ -2,6 +2,7 @@ $(call inherit-product, device/softwinner/tulip-chiphd/device.mk)
 $(call inherit-product, device/google/atv/products/atv_generic.mk)
 
 GAPPS_VARIANT := nano
+GAPPS_EXCLUDED_PACKAGES += SetupWraith
 
 PRODUCT_PACKAGES += \
     ESFileExplorer \
