@@ -40,7 +40,8 @@ LOCAL_C_INCLUDES := \
        system/security/keystore \
        libnativehelper/include \
        $(LOCAL_PATH)/include/schw
-LOCAL_CFLAGS = -fvisibility=hidden -Wall -Werror
+LOCAL_CFLAGS = -fvisibility=hidden -Wall -Werror \
+	-Wno-error=missing-field-initializers
 LOCAL_SHARED_LIBRARIES := \
        liblog \
        libkeystore_binder \
