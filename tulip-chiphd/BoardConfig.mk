@@ -24,6 +24,15 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2147483648
 BOARD_CACHEIMAGE_PARTITION_SIZE := 805306368
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1073741824
 
+# Enable dex-preoptimization to speed up first boot sequence
+ifeq ($(HOST_OS),linux)
+  ifeq ($(filter user userdebug,$(TARGET_BUILD_VARIANT)),)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
+    endif
+  endif
+endif
+
 # recovery stuff
 TW_THEME := landscape_hdpi
 TW_NO_REBOOT_BOOTLOADER := true
