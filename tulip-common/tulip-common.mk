@@ -76,23 +76,23 @@ PRODUCT_PACKAGES += \
     libI420colorconvert      \
     libawmetadataretriever   \
     libawplayer \
-		libawh264		\
-		libawh265		\
-		libawmjpeg		\
-		libawmjpegplus		\
-		libawmpeg2		\
-		libawmpeg4base		\
-		libawvp6soft		\
-		libawvp8		\
-		libawwmv3  		\
-		libawvp9soft		\
-		libawh265soft		\
-		libawmpeg4h263		\
-		libawmpeg4vp6		\
-		libawmpeg4normal	\
-		libawmpeg4dx    	\
-		libawwmv12soft 		\
-		libawavs
+    libawh264		\
+    libawh265		\
+    libawmjpeg		\
+    libawmjpegplus		\
+    libawmpeg2		\
+    libawmpeg4base		\
+    libawvp6soft		\
+    libawvp8		\
+    libawwmv3  		\
+    libawvp9soft		\
+    libawh265soft		\
+    libawmpeg4h263		\
+    libawmpeg4vp6		\
+    libawmpeg4normal	\
+    libawmpeg4dx    	\
+    libawwmv12soft 		\
+    libawavs
 
 # egl
 PRODUCT_COPY_FILES += \
@@ -136,6 +136,7 @@ BUILD_NUMBER := $(shell date +%Y%m%d)
 
 # widevine
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
+SECURE_OS_OPTEE := no
 
 #add widevine libraries
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -152,9 +153,16 @@ PRODUCT_PACKAGES += \
 
 ifeq ($(BOARD_WIDEVINE_OEMCRYPTO_LEVEL), 1)
 PRODUCT_PACKAGES += \
-    liboemcrypto \
-    libteec \
-    tee_supplicant
+    liboemcrypto
+
+ifeq ($(SECURE_OS_OPTEE),yes)
+    PRODUCT_PACKAGES += \
+      libteec \
+      tee_supplicant
+else
+    PRODUCT_PACKAGES += \
+      libtee_client
+endif
 
 PRODUCT_COPY_FILES += \
     device/softwinner/common/optee_ta/a98befed-d679-ce4a-a3c827dcd51d21ed.ta:system/bin/a98befed-d679-ce4a-a3c827dcd51d21ed.ta \
