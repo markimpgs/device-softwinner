@@ -26,7 +26,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1073741824
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
-  ifeq ($(filter user userdebug,$(TARGET_BUILD_VARIANT)),)
+  ifneq ($(filter user userdebug,$(TARGET_BUILD_VARIANT)),)
     ifeq ($(WITH_DEXPREOPT),)
       WITH_DEXPREOPT := true
     endif
