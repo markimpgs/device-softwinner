@@ -149,8 +149,17 @@ on boot
     chown system system /sys/devices/soc.0/cpu_budget_cool.16/roomage
     chmod 0660 /sys/devices/soc.0/cpu_budget_cool.16/roomage
 
+    chown system system /sys/devices/soc.0/cpu_budget_cool.17/roomage
+    chmod 0660 /sys/devices/soc.0/cpu_budget_cool.17/roomage
+
     chown system system /sys/class/devfreq/dramfreq/adaptive/pause
     chmod 0660 /sys/class/devfreq/dramfreq/adaptive/pause
+
+    chown system system /sys/devices/1c40000.gpu/dvfs/android
+    chmod 0660 /sys/devices/1c40000.gpu/dvfs/android
+
+    chown system system /sys/class/devfreq/dramfreq/cur_freq
+    chmod 0660 /sys/class/devfreq/dramfreq/cur_freq
 
     write /dev/cpuset/foreground/cpus 0-3
     write /dev/cpuset/foreground/boost/cpus 0-3
