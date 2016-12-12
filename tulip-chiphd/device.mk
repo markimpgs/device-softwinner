@@ -94,10 +94,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.8723b_bt.used=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.fw.force_adoptable=1 \
     persist.sys.usb.config=mtp,adb \
     ro.adb.secure=0 \
     rw.logger=0 \
-		persist.sys.root_access=2 # Allow ADB access only
+    persist.sys.root_access=2 # Allow ADB access only
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.firmware=v1.2.5
