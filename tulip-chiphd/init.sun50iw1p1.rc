@@ -22,12 +22,14 @@ on early-fs
 
     exec u:r:su:s0 root -- /sbin/busybox sh /initialize_disk.sh
 
+    # mount boot and system
+    # it has to be here as mount_all does not support loopback
+    mount vfat /dev/block/mmcblk0p1 /bootloader rw wait
+    mount ext4 loop@/bootloader/system.img /system rw wait barrier=1
+
     mount_all /fstab.sun50iw1p1
     swapon_all /fstab.sun50iw1p1
     restorecon_recursive /persist
-
-    #wait /dev/block/by-name/media_data
-    #mount vfat /dev/block/by-name/media_data /oem ro nosuid nodev utf8,context=u:object_r:oemfs:s0
 
 on fs
     insmod /system/vendor/modules/disp.ko
