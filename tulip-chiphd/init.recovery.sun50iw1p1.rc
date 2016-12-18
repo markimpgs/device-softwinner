@@ -9,7 +9,11 @@ on init
     insmod /hdmi.ko
 
     mkdir /extsd
+
+    # mount bootloader partition and remove recovery.txt marker
     mkdir /bootloader
+    mount vfat /dev/block/mmcblk0p1 /bootloader rw wait
+    rm /bootloader/recovery.txt
 
 service console /sbin/busybox sh
     class core
