@@ -41,6 +41,7 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # recovery stuff
+TARGET_RECOVERY_UI_LIB := librecovery_ui_tulip_chiphd
 TW_THEME := landscape_hdpi
 TW_NO_REBOOT_BOOTLOADER := true
 TW_NO_SCREEN_TIMEOUT := true
