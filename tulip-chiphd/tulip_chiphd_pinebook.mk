@@ -12,9 +12,7 @@ PRODUCT_PACKAGES += \
     Launcher3
 
 PRODUCT_PACKAGES += \
-    ESFileExplorer \
-    VideoPlayer \
-    Bluetooth
+    VideoPlayer
 
 PRODUCT_COPY_FILES += \
     device/softwinner/common/config/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml

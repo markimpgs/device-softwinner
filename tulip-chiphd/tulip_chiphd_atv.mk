@@ -5,9 +5,7 @@ GAPPS_VARIANT := nano
 GAPPS_EXCLUDED_PACKAGES += SetupWraith
 
 PRODUCT_PACKAGES += \
-    ESFileExplorer \
     Bluetooth \
-    SideloadLauncher \
     Camera \
     Provision
 

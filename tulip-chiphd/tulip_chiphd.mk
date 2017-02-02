@@ -8,11 +8,6 @@ GAPPS_FORCE_BROWSER_OVERRIDES := true
 PRODUCT_PACKAGES += \
     Launcher3
 
-PRODUCT_PACKAGES += \
-    ESFileExplorer \
-    VideoPlayer \
-    Bluetooth
-
 PRODUCT_COPY_FILES += \
     device/softwinner/tulip-chiphd/fstab.sun50iw1p1:root/fstab.sun50iw1p1
 

@@ -45,6 +45,11 @@ PRODUCT_PACKAGES += \
     static_busybox \
     ethtool
 
+PRODUCT_PACKAGES += \
+    ESFileExplorer \
+    Bluetooth \
+    WIFIADB
+
 DEVICE_PACKAGE_OVERLAYS += \
     device/softwinner/tulip-chiphd/overlay
 
