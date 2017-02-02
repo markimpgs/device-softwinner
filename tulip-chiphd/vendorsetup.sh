@@ -24,3 +24,5 @@ add_lunch_combo tulip_chiphd-eng
 add_lunch_combo tulip_chiphd-user
 add_lunch_combo tulip_chiphd_atv-eng
 add_lunch_combo tulip_chiphd_atv-user
+add_lunch_combo tulip_chiphd_pinebook-eng
+add_lunch_combo tulip_chiphd_pinebook-user

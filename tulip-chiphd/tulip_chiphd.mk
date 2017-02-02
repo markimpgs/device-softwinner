@@ -14,6 +14,9 @@ PRODUCT_PACKAGES += \
     Bluetooth
 
 PRODUCT_COPY_FILES += \
+    device/softwinner/tulip-chiphd/fstab.sun50iw1p1:root/fstab.sun50iw1p1
+
+PRODUCT_COPY_FILES += \
     device/softwinner/common/config/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml
 
 # Radio Packages and Configuration Flie
@@ -32,6 +35,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hdmi.device_type=4
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    service.adb.tcp.port=5555
 
 PRODUCT_CHARACTERISTICS := tablet
 

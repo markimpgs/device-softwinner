@@ -61,8 +61,13 @@ ifeq ($(BOARD_WIFI_VENDOR), realtek)
     BOARD_HOSTAPD_DRIVER        := NL80211
     BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_rtl
 
-    WIFI_DRIVER_MODULE_PATH := "/system/vendor/modules/8723bs.ko"
-    WIFI_DRIVER_MODULE_NAME := "8723bs"
+    ifeq ($(TARGET_PRODUCT),tulip_chiphd_pinebook)
+        WIFI_DRIVER_MODULE_NAME := "8723cs"
+    else
+        WIFI_DRIVER_MODULE_NAME := "8723bs"
+    endif
+    
+    WIFI_DRIVER_MODULE_PATH := "/system/vendor/modules/$(WIFI_DRIVER_MODULE_NAME).ko"
     WIFI_DRIVER_MODULE_ARG := "ifname=wlan0 if2name=p2p0"
 
     BOARD_USR_WIFI := rtl8723bs

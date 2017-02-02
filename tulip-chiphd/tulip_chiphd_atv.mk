@@ -12,6 +12,9 @@ PRODUCT_PACKAGES += \
     Provision
 
 PRODUCT_COPY_FILES += \
+    device/softwinner/tulip-chiphd/fstab.sun50iw1p1:root/fstab.sun50iw1p1
+
+PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.live_tv.xml:system/etc/permissions/android.software.live_tv.xml
 
 PRODUCT_COPY_FILES += \
@@ -28,6 +31,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hdmi.device_type=4
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    service.adb.tcp.port=5555
 
 PRODUCT_CHARACTERISTICS := tv
 

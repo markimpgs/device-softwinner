@@ -49,7 +49,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     device/softwinner/tulip-chiphd/overlay
 
 PRODUCT_COPY_FILES += \
-    device/softwinner/tulip-chiphd/fstab.sun50iw1p1:root/fstab.sun50iw1p1 \
     device/softwinner/tulip-chiphd/init.sun50iw1p1.rc:root/init.sun50iw1p1.rc \
     device/softwinner/tulip-chiphd/init.recovery.sun50iw1p1.rc:root/init.recovery.sun50iw1p1.rc \
     device/softwinner/tulip-chiphd/ueventd.sun50iw1p1.rc:root/ueventd.sun50iw1p1.rc \
@@ -110,7 +109,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.spk_dul.used=false \
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    service.adb.tcp.port=5555 \
     persist.ota.server.ip=ota.pine64.org
 
 PRODUCT_PROPERTY_OVERRIDES += \

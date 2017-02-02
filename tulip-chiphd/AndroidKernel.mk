@@ -8,7 +8,7 @@ ifeq ($(KERNEL_CFG_NAME),)
 $(error cannot build kernel, config not specified)
 endif
 
-KERNEL_MODULES_TO_ROOT := nand.ko sunxi_tr.ko disp.ko hdmi.ko sw-device.ko gslX680new.ko
+KERNEL_MODULES_TO_ROOT := sunxi_tr.ko disp.ko hdmi.ko sw-device.ko gslX680new.ko
 
 KERNEL_TOOLCHAIN_ARCH := $(TARGET_KERNEL_ARCH)
 KERNEL_EXTRA_FLAGS := ANDROID_TOOLCHAIN_FLAGS="-mno-android -Werror"
