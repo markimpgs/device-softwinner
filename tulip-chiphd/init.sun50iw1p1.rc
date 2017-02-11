@@ -191,7 +191,7 @@ on property:dev.bootcomplete=1
     write /sys/class/devfreq/dramfreq/adaptive/pause 1 # DISABLE_DRAM_CHANGE
     write /sys/devices/1c40000.gpu/dvfs/android 4 # GPU_NORMAL
     write /sys/kernel/autohotplug/enable 1 # AUTO DISCONNECT
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave # INTERACTIVE
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive # INTERACTIVE
 
 ifeq ($(BOARD_WIDEVINE_OEMCRYPTO_LEVEL), 1)
 service optee /system/bin/tee_supplicant
