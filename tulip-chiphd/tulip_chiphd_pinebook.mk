@@ -1,7 +1,3 @@
-#TARGET_PREBUILT_KERNEL := device/softwinner/tulip-chiphd/pinebook/kernel
-#TARGET_PREBUILT_KERNEL_MODULES := $(call find-copy-subdir-files,*,$(LOCAL_PATH)/pinebook/modules,system/vendor/modules)
-KERNEL_SRC_DIR ?= $(ANDROID_BUILD_TOP)/linux/kernel-tulip-new-bsp
-
 $(call inherit-product, device/softwinner/tulip-chiphd/device.mk)
 $(call inherit-product, build/target/product/full_base.mk)
 
