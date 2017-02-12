@@ -14,6 +14,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/softwinner/common/config/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml
 
+PRODUCT_COPY_FILES += \
+    hardware/aw/audio/tulip/a64_paths.xml:system/etc/a64_paths.xml
+
 # Radio Packages and Configuration Flie
 $(call inherit-product, device/softwinner/common/rild/radio_common.mk)
 #$(call inherit-product, device/softwinner/common/ril_modem/huawei/mu509/huawei_mu509.mk)

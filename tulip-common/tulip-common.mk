@@ -35,8 +35,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     hardware/aw/audio/tulip/audio_policy.conf:system/etc/audio_policy.conf \
-    hardware/aw/audio/tulip/phone_volume.conf:system/etc/phone_volume.conf \
-    hardware/aw/audio/tulip/a64_paths.xml:system/etc/a64_paths.xml
+    hardware/aw/audio/tulip/phone_volume.conf:system/etc/phone_volume.conf
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \

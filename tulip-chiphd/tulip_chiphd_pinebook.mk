@@ -15,12 +15,10 @@ PRODUCT_COPY_FILES += \
     device/softwinner/common/config/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml
 
 PRODUCT_COPY_FILES += \
-    device/softwinner/tulip-chiphd/fstab.sun50iw1p1.pinebook:root/fstab.sun50iw1p1 \
-    device/softwinner/tulip-chiphd/pinebook/modules/sunxi_tr.ko:root/sunxi_tr.ko \
-    device/softwinner/tulip-chiphd/pinebook/modules/disp.ko:root/disp.ko \
-    device/softwinner/tulip-chiphd/pinebook/modules/hdmi.ko:root/hdmi.ko \
-    device/softwinner/tulip-chiphd/pinebook/modules/sw-device.ko:obj/sw-device.ko \
-    device/softwinner/tulip-chiphd/pinebook/modules/gslX680new.ko:obj/gslX680new.ko \
+    device/softwinner/tulip-chiphd/pinebook/a64_paths.xml:system/etc/a64_paths.xml
+
+PRODUCT_COPY_FILES += \
+    device/softwinner/tulip-chiphd/fstab.sun50iw1p1.pinebook:root/fstab.sun50iw1p1
 
 # Radio Packages and Configuration Flie
 $(call inherit-product, device/softwinner/common/rild/radio_common.mk)

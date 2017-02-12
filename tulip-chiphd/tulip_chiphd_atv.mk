@@ -18,6 +18,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 		frameworks/av/media/libstagefright/data/media_codecs_google_tv.xml:system/etc/media_codecs_google_tv.xml \
 
+PRODUCT_COPY_FILES += \
+    hardware/aw/audio/tulip/a64_paths.xml:system/etc/a64_paths.xml
+
 # xhdpi, while we are hardcoding the 1080 resolution.
 # when we start doing 720 as well, will need to stop hardcoding this.
 PRODUCT_PROPERTY_OVERRIDES += \
