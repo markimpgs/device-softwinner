@@ -5,6 +5,8 @@ PRODUCT_COPY_FILES += \
     device/softwinner/common/init.common.rc:root/init.common.rc \
     device/softwinner/common/init.sensors.rc:root/init.sensors.rc \
     device/softwinner/common/ueventd.common.rc:root/ueventd.common.rc \
+	device/softwinner/common/init.wireless.broadcom.rc:root/init.wireless.broadcom.rc \
+	device/softwinner/common/init.wireless.realtek.rc:root/init.wireless.realtek.rc \
 
 ifeq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_PROPERTY_OVERRIDES += \
