@@ -36,7 +36,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     hardware/aw/audio/tulip/audio_policy.conf:system/etc/audio_policy.conf \
-    hardware/aw/audio/tulip/phone_volume.conf:system/etc/phone_volume.conf
+    hardware/aw/audio/tulip/phone_volume.conf:system/etc/phone_volume.conf \
+    hardware/aw/audio/tulip/a64_paths.xml:system/etc/a64_paths.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -45,6 +46,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/softwinner/tulip-common/media_codecs.xml:system/etc/media_codecs.xml \
+    device/softwinner/tulip-common/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
     device/softwinner/tulip-common/cts_media_codecs.xml:system/etc/cts_media_codecs.xml \
     device/softwinner/tulip-common/init.sun50iw1p1.usb.rc:root/init.sun50iw1p1.usb.rc \
     device/softwinner/tulip-common/configs/cfg-videoplayer.xml:system/etc/cfg-videoplayer.xml
@@ -53,46 +55,8 @@ PRODUCT_COPY_FILES += \
     device/softwinner/common/config/android.hardware.sensor.temperature.ambient.xml:system/etc/permissions/android.hardware.sensor.temperature.ambient.xml
 
 # video libs
-PRODUCT_PACKAGES += \
-    libMemAdapter            \
-    libcdx_base              \
-    libcdx_stream            \
-    libnormal_audio          \
-    libcdx_parser            \
-    libVE                    \
-    libvdecoder              \
-    libvencoder              \
-    libadecoder              \
-    libsdecoder              \
-    libplayer                \
-    libad_audio              \
-    libaw_plugin             \
-    libthumbnailplayer       \
-    libaw_wvm                \
-    libstagefrighthw         \
-    libOmxCore               \
-    libOmxVdec               \
-    libOmxVenc               \
-    libI420colorconvert      \
-    libawmetadataretriever   \
-    libawplayer \
-    libawh264		\
-    libawh265		\
-    libawmjpeg		\
-    libawmjpegplus		\
-    libawmpeg2		\
-    libawmpeg4base		\
-    libawvp6soft		\
-    libawvp8		\
-    libawwmv3  		\
-    libawvp9soft		\
-    libawh265soft		\
-    libawmpeg4h263		\
-    libawmpeg4vp6		\
-    libawmpeg4normal	\
-    libawmpeg4dx    	\
-    libawwmv12soft 		\
-    libawavs
+include frameworks/av/media/libcedarc/libcdclist.mk
+include frameworks/av/media/libcedarx/libcdxlist.mk
 
 # egl
 PRODUCT_COPY_FILES += \
