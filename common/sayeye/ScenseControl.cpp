@@ -275,7 +275,7 @@ int ScenseControl::ScenseChange() {
             mDram->SetDramPause("1");
 #endif
 
-            if (mTags == APP_TYPE_GPU) {
+            if (mTags == APP_TYPE_GPU || mTags == APP_TYPE_CPU_GPU) {
 #if defined SUN9IW1P1 || defined SUN8IW6P1
                 mGpu->SetGpuFreq(GPU_PERF);
 #endif

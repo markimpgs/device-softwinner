@@ -82,18 +82,6 @@
   
   <CamcorderProfiles cameraId="0">
         
-      <EncoderProfile quality="720p" fileFormat="mp4" duration="30">
-          <Video codec="h264"
-              bitRate="3000000"
-              width="1280"
-              height="720"
-              frameRate="30" />
-
-          <Audio codec="aac"
-              bitRate="128000"
-              sampleRate="44100"
-              channels="1" />
-      </EncoderProfile>
         <EncoderProfile quality="480p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="1500000"
@@ -107,18 +95,6 @@
                    channels="1" />
         </EncoderProfile>
 	    	
-      <EncoderProfile quality="timelapse720p" fileFormat="mp4" duration="30">
-          <Video codec="h264"
-              bitRate="3000000"
-              width="1280"
-              height="720"
-              frameRate="30" />
-          <!-- audio setting is ignored -->
-          <Audio codec="aac"
-              bitRate="128000"
-              sampleRate="44100"
-              channels="1" />
-      </EncoderProfile>
 	    	<EncoderProfile quality="timelapse480p" fileFormat="mp4" duration="30">
             <Video codec="h264"
                    bitRate="1500000"
@@ -188,8 +164,8 @@
     -->
     <VideoEncoderCap name="h264" enabled="true"
         minBitRate="64000" maxBitRate="3000000"
-        minFrameWidth="320" maxFrameWidth="1600"
-        minFrameHeight="240" maxFrameHeight="1200"
+        minFrameWidth="176" maxFrameWidth="1600"
+        minFrameHeight="144" maxFrameHeight="1200"
         minFrameRate="1" maxFrameRate="30" />
 
     <AudioEncoderCap name="aac" enabled="true"

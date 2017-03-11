@@ -2,7 +2,7 @@
 #define __SUN50IW1P1_H__
 /* cpu spec files defined */
 #define CPU0LOCK    "/sys/devices/system/cpu/cpu0/cpufreq/boot_lock"
-#define ROOMAGE     "/sys/devices/soc.0/cpu_budget_cool.14/roomage"
+#define ROOMAGE     "/sys/devices/soc.0/cpu_budget_cool.17/roomage"
 #define CPUFREQ     "/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq"
 #define CPUONLINE   "/sys/devices/system/cpu/online"
 #define CPUHOT      "/sys/kernel/autohotplug/enable"

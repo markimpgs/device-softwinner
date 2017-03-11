@@ -1,3 +1,5 @@
+#ifndef __SUN9IW1P1_H__
+#define __SUN9IW1P1_H__
 /* cpu spec files defined */
 #define CPU0LOCK    "/sys/devices/system/cpu/cpu0/cpufreq/boot_lock"
 #define CPU4LOCK    "/sys/devices/system/cpu/cpu4/cpufreq/boot_lock"
@@ -41,10 +43,11 @@ const static char *roomage_little[] = {
     "912000 1 1296000 4 1200000 4 1800000 4",
 };
 
-const char *roomage_big[] = {
+const static char *roomage_big[] = {
     "0 0 1296000 2 1200000 4 1800000 4 1",
     "0 0 1296000 1 1200000 4 1800000 4 1",
     "0 0 1296000 1 1200000 4 1800000 4 1",
     "0 0 1296000 1 1200000 4 1800000 4 1",
     "0 0 1296000 1 1200000 4 1800000 4 1",
 };
+#endif

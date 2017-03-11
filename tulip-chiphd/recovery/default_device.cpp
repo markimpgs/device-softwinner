@@ -19,11 +19,25 @@
 #include "screen_ui.h"
 #include <unistd.h>
 
-#define AW_UP            114
-#define AW_DOWN          115
+#define AW_UP            139
+#define AW_DOWN          102
 #define KEY_POWER        116
 
 #define FIRST_BOOT_FLAG "/bootloader/data.notfirstrun"
+
+static const char* MENU_ITEMS[] = {
+    "Reboot system now",
+    "Reboot to bootloader",
+    "Apply update from ADB",
+    "Apply update from extsd",
+    "Apply update from usbhost",
+    "Wipe data/factory reset",
+    "Wipe cache partition",
+    "Mount /system",
+    "View recovery logs",
+    "Power off",
+    NULL
+};
 
 class AwDevice : public Device {
 
@@ -32,14 +46,27 @@ class AwDevice : public Device {
         Device(ui) {
     }
 
+    const char* const* GetMenuItems() {
+        return MENU_ITEMS;
+    }
+
+    BuiltinAction InvokeMenuItem(int menu_position) {
+      switch (menu_position) {
+        case 0: return REBOOT;
+        case 1: return REBOOT_BOOTLOADER;
+        case 2: return APPLY_ADB_SIDELOAD;
+        case 3: return WIPE_DATA;
+        case 4: return WIPE_CACHE;
+        case 5: return MOUNT_SYSTEM;
+        case 6: return VIEW_RECOVERY_LOGS;
+        case 7: return SHUTDOWN;
+        default: return NO_ACTION;
+      }
+    }
+
     int HandleMenuKey(int key, int visible) {
       if (!visible) {
         return kNoAction;
-      }
-
-      int result = Device::HandleMenuKey(key, visible);
-      if (result != kNoAction) {
-        return result;
       }
 
       switch (key) {

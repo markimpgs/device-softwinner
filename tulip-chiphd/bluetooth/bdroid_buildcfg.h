@@ -17,14 +17,15 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME "tulip_chiphd"
+#define BTM_DEF_LOCAL_NAME   "tulip-p1"
 
-// SERVICE_CLASS:0x5A (Bit17 -Networking,Bit19 - Capturing,Bit20 -Object Transfer,Bit22 -Telephony)
+// SERVICE_CLASS:0x1A (Bit17 -Networking,Bit19 - Capturing,Bit20 -Object Transfer)
 // MAJOR CLASS: COMPUTER
 // MINOR CLASS: TABLET
-#define BTA_DM_COD {0x1A, 0x01, 0x14}
+#define BTA_DM_COD {0x1A, 0x01, 0x1C}
 
-#define BTA_GATT_DEBUG FALSE
+#define BTA_GATT_DEBUG TRUE
+
 
 #define HCI_MAX_SIMUL_CMDS (1)
 #define BTM_BLE_SCAN_SLOW_INT_1 (160)

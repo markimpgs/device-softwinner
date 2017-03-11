@@ -20,7 +20,8 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
-    audio.primary.tulip
+    audio.primary.tulip \
+    libAwSurround
 
 PRODUCT_PACKAGES +=\
     charger_res_images \
@@ -135,7 +136,7 @@ BUILD_NUMBER := $(shell date +%Y%m%d)
 
 # widevine
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
-SECURE_OS_OPTEE := no
+SECURE_OS_OPTEE := yes
 
 #add widevine libraries
 PRODUCT_PROPERTY_OVERRIDES += \
