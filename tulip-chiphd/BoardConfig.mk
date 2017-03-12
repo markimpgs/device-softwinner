@@ -66,7 +66,7 @@ ifeq ($(BOARD_WIFI_VENDOR), realtek)
     else
         WIFI_DRIVER_MODULE_NAME := "8723bs"
     endif
-    
+
     WIFI_DRIVER_MODULE_PATH := "/system/vendor/modules/$(WIFI_DRIVER_MODULE_NAME).ko"
     WIFI_DRIVER_MODULE_ARG := "ifname=wlan0 if2name=p2p0"
 
@@ -106,7 +106,7 @@ endif
 # make sure BOARD_HAVE_BLUETOOTH is true for every bt vendor
 BOARD_HAVE_BLUETOOTH := true
 #BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_HAVE_BLUETOOTH_NAME := rtl8723bs
+BOARD_HAVE_BLUETOOTH_NAME := rtl8723bs_vq0
 BOARD_HAVE_BLUETOOTH_RTK_COEX := true
 BOARD_HAVE_BLUETOOTH_RTK := true
 BLUETOOTH_HCI_USE_RTK_H5 := true

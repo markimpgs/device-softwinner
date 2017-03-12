@@ -84,6 +84,9 @@ PRODUCT_COPY_FILES += \
     device/softwinner/tulip-chiphd/configs/sunxi_ir_recv.kl:system/usr/keylayout/sunxi_ir_recv.kl \
     device/softwinner/tulip-chiphd/configs/gt9xxf_ts.idc:system/usr/idc/gt9xxf_ts.idc
 
+PRODUCT_COPY_FILES += \
+    device/softwinner/tulip-chiphd/wifi_efuse_8723bs-vq0.map:system/etc/wifi/wifi_efuse_8723bs-vq0.map
+
 #PRODUCT_COPY_FILES += \
     device/softwinner/tulip-chiphd/hawkview/sensor_list_cfg.ini:system/etc/hawkview/sensor_list_cfg.ini
 
@@ -137,4 +140,4 @@ PRODUCT_COPY_FILES += \
 # Some CTS tests will be skipped based on what the initial API level that
 # shipped on device was.
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.product.first_api_level=21
+    ro.product.first_api_level=24
