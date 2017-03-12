@@ -10,7 +10,7 @@
 
 #include "V4L2CameraDevice2.h"
 #include "CallbackNotifier.h"
-
+#include "sunxi_camera_android.h"
 
 extern "C" int scaler(unsigned char * psrc, unsigned char * pdst, int src_w, int src_h, int dst_w, int dst_h, int fmt, int align);
 

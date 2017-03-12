@@ -23,6 +23,7 @@
 #include "libfacedetection/SmileEyeBlinkAPI.h"
 #include "libfacedetection/ApperceivePeopleApi.h"
 #include "CameraPlatform.h"
+#include <sunxi_camera_android.h>
 
 #ifdef __PLATFORM_A64__
 #include <sunxi_camera.h>
