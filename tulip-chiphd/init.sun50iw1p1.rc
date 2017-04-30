@@ -164,6 +164,13 @@ on boot
     chown system system /sys/class/devfreq/dramfreq/cur_freq
     chmod 0660 /sys/class/devfreq/dramfreq/cur_freq
 
+ifeq ($(TARGET_PRODUCT),tulip_chiphd_pinebook)
+    # enable headphones on Pinebook
+    write /sys/class/gpio/export 362
+    write /sys/class/gpio/gpio362/direction out
+    write /sys/class/gpio/gpio362/value 1
+endif
+
     write /dev/cpuset/foreground/cpus 0-3
     write /dev/cpuset/foreground/boost/cpus 0-3
     write /dev/cpuset/background/cpus 0
