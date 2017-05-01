@@ -14,9 +14,11 @@ KERNEL_TOOLCHAIN_ARCH := $(TARGET_KERNEL_ARCH)
 KERNEL_EXTRA_FLAGS := ANDROID_TOOLCHAIN_FLAGS="-mno-android -Werror"
 KERNEL_CROSS_COMP := $(notdir $(TARGET_TOOLS_PREFIX))
 
-# enable ccache or any other wrapper
-ifneq ($(CC_WRAPPER),)
-KERNEL_CROSS_COMP := "$(CC_WRAPPER) $(KERNEL_CROSS_COMP)"
+# enable ccache
+ifneq ($(filter-out false,$(USE_CCACHE)),)
+ccache := $(ANDROID_BUILD_TOP)/prebuilts/misc/$(HOST_PREBUILT_TAG)/ccache/ccache
+KERNEL_CROSS_COMP := "$(ccache) $(KERNEL_CROSS_COMP)"
+ccache :=
 endif
 
 #remove time_macros from ccache options, it breaks signing process
