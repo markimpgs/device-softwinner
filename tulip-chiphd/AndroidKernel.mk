@@ -14,11 +14,9 @@ KERNEL_TOOLCHAIN_ARCH := $(TARGET_KERNEL_ARCH)
 KERNEL_EXTRA_FLAGS := ANDROID_TOOLCHAIN_FLAGS="-mno-android -Werror"
 KERNEL_CROSS_COMP := $(notdir $(TARGET_TOOLS_PREFIX))
 
-KERNEL_CCACHE :=$(firstword $(TARGET_CC))
-KERNEL_PATH := $(ANDROID_BUILD_TOP)/vendor/pine64/support
-ifeq ($(notdir $(KERNEL_CCACHE)),ccache)
-KERNEL_CROSS_COMP := "ccache $(KERNEL_CROSS_COMP)"
-KERNEL_PATH := $(KERNEL_PATH):$(ANDROID_BUILD_TOP)/$(dir $(KERNEL_CCACHE))
+# enable ccache or any other wrapper
+ifneq ($(CC_WRAPPER),)
+KERNEL_CROSS_COMP := "$(CC_WRAPPER) $(KERNEL_CROSS_COMP)"
 endif
 
 #remove time_macros from ccache options, it breaks signing process
@@ -40,7 +38,6 @@ KERNEL_BLD_FLAGS :=$(KERNEL_BLD_FLAGS) \
      O=$(KERNEL_OUT_DIR) \
 
 KERNEL_BLD_ENV := CROSS_COMPILE=$(KERNEL_CROSS_COMP) \
-    PATH=$(KERNEL_PATH):$(PATH) \
     CCACHE_SLOPPINESS=$(KERNEL_CCSLOP)
 KERNEL_FAKE_DEPMOD := $(KERNEL_OUT_DIR)/fakedepmod/lib/modules
 
