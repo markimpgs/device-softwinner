@@ -130,4 +130,9 @@ $(PRODUCT_OUT)/ramdisk.img: copy_modules_to_root
 
 $(PRODUCT_OUT)/system.img: copy_modules_to_system
 
+clean_kernel_and_modules:
+	rm -rf $(KERNEL_BZIMAGE) $(KERNEL_OUT_MODINSTALL)
+
+installclean: clean_kernel_and_modules
+
 endif #TARGET_KERNEL_BUILT_FROM_SOURCE
