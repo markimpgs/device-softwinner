@@ -62,7 +62,7 @@ ifeq (,$(filter build_kernel-nodeps,$(MAKECMDGOALS)))
 $(KERNEL_BZIMAGE): $(MINIGZIP)
 endif
 
-ifneq ($(shell cat $(KERNEL_SRC_DIR)/modules/gpu/mali400/kernel_mode/aw_version)), $(shell cat device/softwinner/tulip-common/egl/aw_version))
+ifneq ($(shell cat $(KERNEL_SRC_DIR)/modules/gpu/mali400/kernel_mode/aw_version), $(shell cat device/softwinner/tulip-common/egl/aw_version))
 $(error "Kernel Mali400 drivers does not match user-space drivers: $(shell cat $(KERNEL_SRC_DIR)/modules/gpu/mali400/kernel_mode/aw_version) vs $(shell cat device/softwinner/tulip-common/egl/aw_version)")
 endif
 
