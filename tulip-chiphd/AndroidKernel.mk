@@ -67,6 +67,7 @@ $(KERNEL_BZIMAGE): $(KERNEL_CONFIG)
 	$(hide) $(KERNEL_BLD_ENV) $(MAKE) -C $(KERNEL_SRC_DIR) M=$(KERNEL_SRC_DIR)/modules/aw_schw $(KERNEL_BLD_FLAGS)
 	$(hide) $(KERNEL_BLD_ENV) $(MAKE) -C $(KERNEL_SRC_DIR) M=$(KERNEL_SRC_DIR)/modules/nand/sun50iw1p1 $(KERNEL_BLD_FLAGS)
 	$(hide) $(KERNEL_BLD_ENV) $(MAKE) -C $(KERNEL_SRC_DIR) M=$(KERNEL_SRC_DIR)/modules/gpu/mali400/kernel_mode/driver/src/devicedrv/mali $(KERNEL_BLD_FLAGS) $(MALI_BUILD_FLAGS)
+	test "$(shell $(KERNEL_SRC_DIR)/modules/gpu/mali400/kernel_mode/aw_version)" -eq "$(shell device/softwinner/tulip-common/egl/aw_version)"
 	$(hide) cp -f $(KERNEL_OUT_DIR)/arch/arm64/boot/Image $@
 
 $(KERNEL_OUT_MODINSTALL): $(KERNEL_BZIMAGE)
