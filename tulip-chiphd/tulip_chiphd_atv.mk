@@ -6,11 +6,7 @@ GAPPS_EXCLUDED_PACKAGES += SetupWraith
 
 PRODUCT_PACKAGES += \
     Bluetooth \
-    Camera \
     Provision
-
-PRODUCT_COPY_FILES += \
-    device/softwinner/tulip-chiphd/fstab.sun50iw1p1:root/fstab.sun50iw1p1
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.live_tv.xml:system/etc/permissions/android.software.live_tv.xml

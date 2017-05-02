@@ -9,9 +9,6 @@ PRODUCT_PACKAGES += \
     Launcher3
 
 PRODUCT_COPY_FILES += \
-    device/softwinner/tulip-chiphd/fstab.sun50iw1p1:root/fstab.sun50iw1p1
-
-PRODUCT_COPY_FILES += \
     device/softwinner/common/config/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml
 
 PRODUCT_COPY_FILES += \

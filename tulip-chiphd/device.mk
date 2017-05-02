@@ -48,10 +48,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ESFileExplorer \
     Bluetooth \
-    WIFIADB
+    WIFIADB \
+    Camera
 
 DEVICE_PACKAGE_OVERLAYS += \
     device/softwinner/tulip-chiphd/overlay
+
+PRODUCT_COPY_FILES += \
+    device/softwinner/tulip-chiphd/fstab.sun50iw1p1:root/fstab.sun50iw1p1
 
 PRODUCT_COPY_FILES += \
     device/softwinner/tulip-chiphd/init.sun50iw1p1.rc:root/init.sun50iw1p1.rc \
