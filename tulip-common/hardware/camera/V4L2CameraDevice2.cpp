@@ -2992,10 +2992,10 @@ int V4L2CameraDevice::getSensorType()
 	ctrl.id = V4L2_CID_SENSOR_TYPE;
 	qc_ctrl.id = V4L2_CID_SENSOR_TYPE;
 
-	if (-1 == ioctl (mCameraFd, VIDIOC_QUERYCTRL, &qc_ctrl))
+	if (-1 == ioctl(mCameraFd, VIDIOC_QUERYCTRL, &qc_ctrl))
 	{
-		LOGE("query sensor type ctrl failed");
-		return -1;
+		LOGE("query sensor type ctrl failed, returning V4L2_SENSOR_TYPE_YUV");
+		return V4L2_SENSOR_TYPE_YUV;
 	}
 	ret = ioctl(mCameraFd, VIDIOC_G_CTRL, &ctrl);
 	return ctrl.value;
