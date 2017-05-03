@@ -15,6 +15,11 @@ PRODUCT_COPY_FILES += \
 		frameworks/av/media/libstagefright/data/media_codecs_google_tv.xml:system/etc/media_codecs_google_tv.xml \
 
 PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.camera.external.xml:system/etc/permissions/android.hardware.camera.external.xml \
+    frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
+    device/softwinner/tulip-chiphd/configs/camera.cfg:system/etc/camera.cfg
+
+PRODUCT_COPY_FILES += \
     hardware/aw/audio/tulip/a64_paths.xml:system/etc/a64_paths.xml
 
 # xhdpi, while we are hardcoding the 1080 resolution.

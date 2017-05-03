@@ -14,6 +14,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     hardware/aw/audio/tulip/a64_paths.xml:system/etc/a64_paths.xml
 
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.camera.external.xml:system/etc/permissions/android.hardware.camera.external.xml \
+    frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
+    device/softwinner/tulip-chiphd/configs/camera.cfg:system/etc/camera.cfg
+
 # Radio Packages and Configuration Flie
 $(call inherit-product, device/softwinner/common/rild/radio_common.mk)
 #$(call inherit-product, device/softwinner/common/ril_modem/huawei/mu509/huawei_mu509.mk)
