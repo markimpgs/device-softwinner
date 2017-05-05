@@ -63,7 +63,7 @@ ifeq ($(BOARD_WIFI_VENDOR), realtek)
 
     WIFI_DRIVER_MODULE_PATH := "/system/vendor/modules/8723bs.ko"
     WIFI_DRIVER_MODULE_NAME := "8723bs"
-    WIFI_DRIVER_MODULE_ARG := "ifname=wlan0 if2name=p2p0"
+    WIFI_DRIVER_MODULE_ARG := "ifname=wlan0 if2name=p2p0 rtw_power_mgnt=0"
 
     BOARD_USR_WIFI := rtl8723bs
 endif
