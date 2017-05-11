@@ -49,6 +49,9 @@ TW_HAS_NO_RECOVERY_PARTITION := true
 TW_HAS_NO_BOOT_PARTITION := true
 SW_BOARD_TOUCH_RECOVERY := true
 
+# busybox related
+WITH_BUSYBOX_LINKS := true
+
 # wifi and bt configuration
 # 1. Wifi Configuration
 # 1.1 realtek wifi support
