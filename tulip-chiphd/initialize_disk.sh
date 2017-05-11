@@ -36,6 +36,8 @@ if [ "${END_DISK}" != "${CYLINDERS}" ]; then
   fi
 else
   echo "$DISK_PART: is $START_DISK to $END_DISK of $CYLINDERS"
+  echo "It is already resized"
+  exit 0
 fi
 
 # Mount system
