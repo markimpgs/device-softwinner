@@ -42,6 +42,7 @@ PRODUCT_PACKAGES += \
     hdmi_cec.tulip \
     power.tulip \
     input.evdev.default \
+    busybox \
     static_busybox \
     ethtool
 
