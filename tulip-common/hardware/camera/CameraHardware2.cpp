@@ -1730,7 +1730,7 @@ status_t CameraHardware::cancelAutoFocus()
 int CameraHardware::parse_focus_areas(const char *str, bool is_face)
 {
 	int ret = -1;
-	char *ptr,*tmp;
+	const char *ptr,*tmp;
 	char p1[6] = {0}, p2[6] = {0};
 	char p3[6] = {0}, p4[6] = {0}, p5[6] = {0};
 	int  l,t,r,b;

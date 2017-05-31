@@ -162,12 +162,13 @@ LOCAL_SHARED_LIBRARIES:= \
     libutils \
     libcutils \
     libcamera_client \
-    libui	
-	
+    libui \
+    liblog
+
 LOCAL_SHARED_LIBRARIES += \
 	libhdr \
 	libproc
-	
+
 LOCAL_C_INCLUDES += 								\
 	frameworks/base/core/jni/android/graphics 		\
 	frameworks/native/include/media/openmax			\

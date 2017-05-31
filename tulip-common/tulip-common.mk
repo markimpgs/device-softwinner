@@ -8,7 +8,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libion \
-    setmacaddr \
     sunxi-nand-part
 
 # add for bluetooth addr

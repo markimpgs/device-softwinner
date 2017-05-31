@@ -32,11 +32,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-#wifi/bt mac
-PRODUCT_PACKAGES += \
-    setmacaddr \
-    setbtmacaddr
-
 # xml
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \

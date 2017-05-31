@@ -89,7 +89,7 @@ CCameraConfig::CCameraConfig(int id)
 	,mFastPictureMode(false)
 {
 	mhKeyFile = ::fopen(CAMERA_KEY_CONFIG_PATH, "rb");
-	if (mhKeyFile <= 0)
+	if (mhKeyFile == NULL)
 	{
 		LOGV("open file %s failed", CAMERA_KEY_CONFIG_PATH);
 		return;
