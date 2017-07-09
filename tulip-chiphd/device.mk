@@ -44,13 +44,11 @@ PRODUCT_PACKAGES += \
     input.evdev.default \
     busybox \
     static_busybox \
-    ethtool
-
-PRODUCT_PACKAGES += \
-    ESFileExplorer \
-    Bluetooth \
-    WIFIADB \
-    Camera
+    ethtool \
+    Camera \
+    Bluetooth
+    
+$(call inherit-product, vendor/ayufan-pine64/apps/vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     device/softwinner/tulip-chiphd/overlay
