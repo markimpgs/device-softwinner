@@ -37,7 +37,7 @@ PRODUCT_CHARACTERISTICS := tablet
 PRODUCT_AAPT_CONFIG := mdpi large xlarge
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
-$(call inherit-product, vendor/google/build/opengapps-packages.mk)
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
 
 PRODUCT_BRAND := Allwinner
 PRODUCT_NAME := tulip_chiphd_pinebook
