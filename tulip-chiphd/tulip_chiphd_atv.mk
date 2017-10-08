@@ -34,7 +34,7 @@ PRODUCT_CHARACTERISTICS := tv
 PRODUCT_AAPT_CONFIG := normal large xlarge hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-$(call inherit-product, vendor/google/atv-build/atv-vendor.mk)
+$(call inherit-product, vendor/opengapps/atv-build/atv-vendor.mk)
 
 PRODUCT_BRAND := Allwinner
 PRODUCT_NAME := tulip_chiphd_atv
