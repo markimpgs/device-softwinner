@@ -18,3 +18,9 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/tulip_chiphd.mk \
     $(LOCAL_DIR)/tulip_chiphd_atv.mk \
     $(LOCAL_DIR)/tulip_chiphd_pinebook.mk
+
+COMMON_LUNCH_CHOICES := \
+	tulip_chiphd-eng \
+	tulip_chiphd-user \
+	tulip_chiphd_atv-eng \
+	tulip_chiphd_atv-user
