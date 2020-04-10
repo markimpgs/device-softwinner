@@ -95,7 +95,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # BUILD_DISPLAY_ID := $(BUILD_ID).$(BUILD_NUMBER)
 # required by gms.
 DISPLAY_BUILD_NUMBER := true
-BUILD_NUMBER := $(shell date +%Y%m%d)
+#BUILD_NUMBER := $(shell date +%Y%m%d)
 
 # widevine
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3

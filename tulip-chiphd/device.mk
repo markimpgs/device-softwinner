@@ -4,7 +4,7 @@ $(call inherit-product, frameworks/native/build/tablet-7in-xhdpi-2048-dalvik-hea
 $(call inherit-product, hardware/realtek/bluetooth/firmware/rtlbtfw_cfg.mk)
 $(call inherit-product, vendor/supersu/vendor.mk)
 
-KERNEL_SRC_DIR ?= $(ANDROID_BUILD_TOP)/linux/kernel-tulip
+KERNEL_SRC_DIR ?= ./linux/kernel-tulip
 KERNEL_CFG_NAME ?= sun50iw1p1smp_android
 TARGET_KERNEL_ARCH ?= arm64
 
